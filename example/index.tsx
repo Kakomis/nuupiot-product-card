@@ -6,7 +6,8 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from '../.';
 const product = {
   id: 1,
   title: 'Mocca coffee',
-}
+  img: './coffee-mug.jpg',
+};
 
 const App = () => {
   return (
@@ -14,19 +15,17 @@ const App = () => {
       <ProductCard
         product={product}
         initialValues={{
-            count: 4,
-            maxCount: 10,
+          count: 4,
+          maxCount: 10,
         }}
       >
-      {
-        ({ reset, increaseBy, isMaxCountReached, count }) => (
-        <>
+        {({ reset, increaseBy, isMaxCountReached, count }) => (
+          <>
             <ProductImage />
             <ProductTitle />
             <ProductButtons />
-        </>
-        )
-      }
+          </>
+        )}
       </ProductCard>
     </>
   );
